@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="game_container">
+                <!-- overlay for background -->
+                <div class="overlayCont absolute"></div>
+            
+                <!-- starting game by entering names and selecting player for first turn -->
+                <div class="gameStartCont">
+                    <div class="enterName">
+                        <h2 class="game_heading center_col">Game of pig dice.!</h2>
+                        <div class="setName">
+                            <label for="player1">Player 1:</label>
+                            <input type="text" id="player1" placeholder="Enter Name of Player 1"><br>
+                            <label for="player2">Player 2:</label>
+                            <input type="text" id="player2" placeholder="Enter Name of Player 2">
+                        </div>
+                        <button class="setNamebtn btn">Set Name🔠</button>
+                    </div>
+                    <div class="selectPlayer displayNone">
+                        <p>Who starts first?</p>
+                        <div class="selectPlayerBtn">
+                            <button id="player1Start"></button>
+                            <button id="player2Start"></button>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <!-- buttons to control -->
+                <div class="button_cont">
+                    <!-- <button class="newGame btn">New Game🔄️</button> -->
+                    <div class="dice_img ">
+                        <img src="./Dice/dice1-png-27671.png" alt="" id="dice1" class="dice displayNone">
+                        <img src="./Dice/dice2-png-27664.png" alt="" id="dice2" class="dice displayNone">
+                        <img src="./Dice/dice3-png-27671.png" alt="" id="dice3" class="dice displayNone">
+                        <img src="./Dice/dice4-png-27671.png" alt="" id="dice4" class="dice displayNone">
+                        <img src="./Dice/dice5-png-27658.png" alt="" id="dice5" class="dice displayNone">
+                        <img src="./Dice/dice6-png-27671.png" alt="" id="dice6" class="dice displayNone">
+                    </div>
+                    <button class="rollDice btn">Roll Dice🎲</button>
+                    <button class="hold btn">Hold⏯️</button>
+                    <!-- <button class="setNamebtn btn">Set Name🔠</button> -->
+                </div>
+            
+                <!-- player1 section -->
+                <div id="Player 1" class="player player1_cont inactive">
+                    <!-- <div class="absolute inactive player1_inactive"></div> -->
+                    <div class="playerNameCont">
+                        <h1 class="player1Name">Player 1</h1>
+                        <span class="player1_highscore highScore">0</span>
+                    </div>
+                    <div class="current_cont">
+                        <h3>Current</h3>
+                        <span class="score" id="player1_score">0</span>
+                    </div>
+                </div>
+            
+                <!-- player2 section -->
+                <div id="Player 2" class="player player2_cont inactive">
+                    <!-- <div class="absolute inactive player2_inactive"></div> -->
+                    <div class="playerNameCont">
+                        <h1 class="player2Name">Player 2</h1>
+                        <span class="player2_highscore highScore">0</span>
+                    </div>
+                    <div class="current_cont">
+                        <h3>Current</h3>
+                        <span class="score" id="player2_score">0</span>
+                    </div>
+                </div>
+            
+                <!-- declaring winners container -->
+                <div class="winner_cont absolute displayNone">
+                    <div class="declare_winner">
+                        <h4 id="winner_name"></h4>
+                        <button class="newGame btn">New Game🔄️</button>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+            <!-- <div class="game-instruction col-xxl-3 col-xl-4 col-md-12 col-sm-12">
+                <h3 class="game-definition">WHAT IS THE PIG DICE GAME?</h3>
+                <p>The game of Pig is a very simple jeopardy dice game in which two players race to reach 100 points. Each turn, a player
+                repeatedly rolls a die until either a 1 is rolled or the player holds and scores the sum of the rolls (i.e. the turn
+                total). At any time during a player's turn, the player is faced with two decisions:</p>
+                <p class="instruction-heading"><strong>How to play:</strong></p>
+                <ul class="list-group list-group-flush instruction-text">
+                    <li>roll - If the player rolls a
+                        <li>1: the player scores nothing and it becomes the opponent's turn.</li>
+                        <li>2 - 6: the number is added to the player's turn total and the player's turn continues.</li>
+                    </li>
+                    <li>hold - The turn total is added to the player's score and it becomes the opponent's turn.</li>
+                </ul>
+            
+            </div> -->
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity = "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
